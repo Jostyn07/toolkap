@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toolkap — Herramientas Digitales para Emprendedores</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="nav">
+    <a href="#" class="nav-logo">
+      <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="50,5 95,35 80,90 20,90 5,35" fill="#0D0D0D" stroke="#E83800" stroke-width="3"/>
+        <polygon points="50,15 85,38 50,55" fill="#E83800" opacity="0.9"/>
+        <polygon points="50,15 15,38 50,55" fill="#444444" opacity="0.9"/>
+        <polygon points="15,38 28,80 50,55" fill="#888888" opacity="0.4"/>
+        <polygon points="85,38 72,80 50,55" fill="#E83800" opacity="0.3"/>
+      </svg>
+      <span>TOOLKAP</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="nav-links">
+      <a href="#productos">Productos</a>
+      <a href="#por-que">Por qué Toolkap</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://wa.me/573332380765?text=Hola%2C+quiero+saber+más+sobre+Fincil" target="_blank" class="btn-nav">Comprar ahora</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <span class="badge">Herramientas para emprendedores colombianos</span>
+        <h1>Tu negocio,<br/><em>bajo control.</em></h1>
+        <p>Herramientas digitales simples y asequibles para que sepas exactamente cuánto estás ganando y tomes mejores decisiones.</p>
+        <div class="hero-actions">
+          <a href="#productos" class="btn btn-primary">Ver productos</a>
+          <a href="https://wa.me/573332380765?text=Hola%2C+quiero+saber+más+sobre+Toolkap" target="_blank" class="btn btn-ghost">Hablar con nosotros</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="mockup">
+          <div class="mockup-header">
+            <span class="mockup-title">FINCIL · RESUMEN DEL MES</span>
+            <span class="mockup-live"></span>
+          </div>
+          <div class="mockup-rows">
+            <div class="mockup-row positive">
+              <span>Ingresos totales</span>
+              <strong>+ $3.200.000</strong>
+            </div>
+            <div class="mockup-row negative">
+              <span>Gastos totales</span>
+              <strong>− $1.800.000</strong>
+            </div>
+            <hr class="mockup-divider"/>
+            <div class="mockup-row profit">
+              <span>Ganancia neta</span>
+              <strong>+ $1.400.000</strong>
+            </div>
+          </div>
+          <div class="mockup-progress">
+            <div class="progress-bar" style="--pct: 56%"></div>
+          </div>
+          <div class="mockup-footer">
+            <span>Punto de equilibrio</span>
+            <span class="mockup-ok">✓ Alcanzado</span>
+          </div>
+        </div>
+        <p class="mockup-caption">Vista real de Fincil en uso</p>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products" id="productos">
+      <div class="section-head reveal">
+        <span class="section-label">Nuestros productos</span>
+        <h2>Herramientas que<br/>realmente usas</h2>
+        <p>Diseñadas para emprendedores que quieren claridad financiera sin complicaciones.</p>
+      </div>
+
+      <div class="products-grid">
+
+        <article class="product-card available reveal">
+          <div class="card-top">
+            <span class="product-num">01</span>
+            <span class="tag tag-available">Disponible ahora</span>
+          </div>
+          <div class="product-icon">📊</div>
+          <h3>Fincil</h3>
+          <p>Plantilla de Excel para controlar las finanzas de tu negocio. Registra ingresos, gastos, flujo de caja y punto de equilibrio — todo en un solo archivo.</p>
+          <ul class="features">
+            <li>Control de ingresos y gastos por categoría</li>
+            <li>Dashboard con indicadores clave</li>
+            <li>Punto de equilibrio automático</li>
+            <li>Separación finanzas personales vs negocio</li>
+            <li>Proyección semanal de flujo de caja</li>
+            <li>Compatible con Excel 2016 en adelante</li>
+          </ul>
+          <div class="product-price">
+            <strong class="price-amount">$5.000</strong>
+            <span class="price-detail">COP · pago único</span>
+          </div>
+          <div class="product-actions">
+            <a href="https://wa.me/573332380765?text=Hola%2C+quiero+comprar+Fincil+%28la+plantilla+Excel%29+%F0%9F%93%8A" target="_blank" class="btn-wa">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Comprar por WhatsApp
+            </a>
+            <a href="https://m.me/toolkap" target="_blank" class="btn-fb">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.149 0 11.504c0 3.639 1.799 6.876 4.607 8.993V24l4.208-2.303c1.126.31 2.319.479 3.553.479 6.627 0 12-5.149 12-11.504C24 5.149 18.627 0 12 0zm1.191 15.494l-3.054-3.235-5.963 3.235 6.559-6.966 3.129 3.235 5.887-3.235-6.558 6.966z"/></svg>
+              Comprar por Messenger
+            </a>
+          </div>
+        </article>
+
+        <article class="product-card soon reveal">
+          <div class="card-top">
+            <span class="product-num">02</span>
+            <span class="tag tag-soon">Próximamente</span>
+          </div>
+          <div class="product-icon muted-icon">🌐</div>
+          <h3>Fincil Web</h3>
+          <p>La misma potencia de Fincil pero en tu navegador. Sin descargas, sin instalaciones. Accede desde cualquier dispositivo y mantén tus datos siempre actualizados.</p>
+          <ul class="features">
+            <li>Todo lo de Fincil Excel, en la nube</li>
+            <li>Acceso desde celular, tablet o PC</li>
+            <li>Datos siempre sincronizados</li>
+            <li>Reportes descargables en PDF</li>
+            <li>Sin necesidad de Excel instalado</li>
+            <li>Soporte incluido</li>
+          </ul>
+          <div class="product-price">
+            <strong class="price-amount muted">$10.000</strong>
+            <span class="price-detail">COP · por mes</span>
+          </div>
+          <div class="product-actions">
+            <a href="https://wa.me/573332380765?text=Hola%2C+quiero+que+me+avisen+cuando+Fincil+Web+esté+disponible" target="_blank" class="btn-notify">
+              Avisarme cuando esté listo
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="why" id="por-que">
+      <div class="section-head reveal">
+        <span class="section-label">Por qué Toolkap</span>
+        <h2>Hecho para<br/>emprendedores reales</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <span class="why-num">01</span>
+          <h4>Sin complicaciones</h4>
+          <p>No necesitas saber contabilidad. Si sabes sumar, puedes usar Fincil.</p>
+        </div>
+        <div class="why-item reveal">
+          <span class="why-num">02</span>
+          <h4>Precio justo</h4>
+          <p>$5.000 COP una sola vez. Menos que un almuerzo, más que una app de $0.</p>
+        </div>
+        <div class="why-item reveal">
+          <span class="why-num">03</span>
+          <h4>Listo en minutos</h4>
+          <p>Pagas, recibes el archivo y empiezas a usarlo el mismo día.</p>
+        </div>
+        <div class="why-item reveal">
+          <span class="why-num">04</span>
+          <h4>Soporte directo</h4>
+          <p>¿Tienes dudas? Nos escribes al WhatsApp y te respondemos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contacto">
+      <div class="cta-inner reveal">
+        <h2>¿Listo para tener<br/>claridad en tus finanzas?</h2>
+        <p>Empieza hoy con Fincil. $5.000 COP y te lo enviamos al instante.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/573332380765?text=Hola%2C+quiero+comprar+Fincil+%F0%9F%93%8A" target="_blank" class="btn-wa">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Comprar por WhatsApp
+          </a>
+          <a href="https://m.me/toolkap" target="_blank" class="btn-fb">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.149 0 11.504c0 3.639 1.799 6.876 4.607 8.993V24l4.208-2.303c1.126.31 2.319.479 3.553.479 6.627 0 12-5.149 12-11.504C24 5.149 18.627 0 12 0zm1.191 15.494l-3.054-3.235-5.963 3.235 6.559-6.966 3.129 3.235 5.887-3.235-6.558 6.966z"/></svg>
+            Comprar por Messenger
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <a href="#" class="footer-logo">
+        <svg width="26" height="26" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <polygon points="50,5 95,35 80,90 20,90 5,35" fill="#0D0D0D" stroke="#E83800" stroke-width="3"/>
+          <polygon points="50,15 85,38 50,55" fill="#E83800" opacity="0.9"/>
+          <polygon points="50,15 15,38 50,55" fill="#444444" opacity="0.9"/>
+        </svg>
+        <span>TOOLKAP</span>
+      </a>
+      <p>© 2026 Toolkap</p>
+    </div>
+    <div class="footer-right">
+      <a href="https://wa.me/573332380765" target="_blank">WhatsApp</a>
+      <a href="mailto:toolkapcorp@gmail.com">toolkapcorp@gmail.com</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

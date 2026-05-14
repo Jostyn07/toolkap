@@ -123,7 +123,14 @@ nav {
 .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
+/*------------------------------------------
+LOGO
+--------------------------------------------*/
+.logo {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
 /* ─────────────────────────────────────────
    HERO
 ───────────────────────────────────────── */

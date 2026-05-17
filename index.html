@@ -8,8 +8,137 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── FINCIL WEB BANNER ── */
+    .launch-banner {
+      background: linear-gradient(135deg, #00c9a7 0%, #0f1e35 100%);
+      padding: 14px 24px;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .launch-banner strong { font-weight: 700; }
+    .launch-banner a {
+      background: #fff;
+      color: #0f1e35;
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: opacity .2s;
+    }
+    .launch-banner a:hover { opacity: .85; }
+
+    /* ── DEMO BADGE en product card ── */
+    .tag-live {
+      background: #00c9a7;
+      color: #0f1e35;
+      font-weight: 700;
+    }
+    .tag-beta {
+      background: #fff3cd;
+      color: #856404;
+      font-weight: 700;
+    }
+
+    /* ── DEMO CTA inside card ── */
+    .btn-demo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 13px 20px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all .2s;
+      background: #0f1e35;
+      color: #fff;
+      border: none;
+    }
+    .btn-demo:hover {
+      background: #162740;
+      transform: translateY(-1px);
+    }
+    .btn-demo-ghost {
+      background: transparent;
+      color: #0f1e35;
+      border: 2px solid #0f1e35;
+    }
+    .btn-demo-ghost:hover {
+      background: #0f1e35;
+      color: #fff;
+    }
+
+    /* ── TRIAL BADGE ── */
+    .trial-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #e8fdf8;
+      color: #00a889;
+      border: 1px solid #b2eee3;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      margin-bottom: 12px;
+    }
+
+    /* ── MODULES LIST ── */
+    .modules-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin: 12px 0;
+    }
+    .module-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: #4a5568;
+    }
+    .module-item::before {
+      content: '✓';
+      color: #00c9a7;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ── OVERRIDES for second card ── */
+    .product-card.live {
+      border: 2px solid #00c9a7;
+      position: relative;
+      overflow: hidden;
+    }
+    .product-card.live::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #00c9a7, #0f1e35);
+    }
+  </style>
 </head>
 <body>
+
+  <!-- LAUNCH BANNER -->
+  <div class="launch-banner">
+    <strong>🚀 Fincil Web ya está disponible</strong>
+    <span>Prueba gratis por 3 días — sin tarjeta de crédito</span>
+    <a href="https://www.fincil.cloud" target="_blank">Probar ahora →</a>
+  </div>
 
   <nav id="nav">
     <a href="#" class="nav-logo">
@@ -25,7 +154,7 @@
       <a href="#productos">Productos</a>
       <a href="#por-que">Por qué Toolkap</a>
       <a href="#contacto">Contacto</a>
-      <a href="https://wa.me/573332380765?text=Hola%2C+quiero+saber+más+sobre+Fincil" target="_blank" class="btn-nav">Comprar ahora</a>
+      <a href="https://www.fincil.cloud" target="_blank" class="btn-nav">Probar Fincil Web</a>
     </div>
   </nav>
 
@@ -38,8 +167,8 @@
         <h1>Tu negocio,<br/><em>bajo control.</em></h1>
         <p>Herramientas digitales simples y asequibles para que sepas exactamente cuánto estás ganando y tomes mejores decisiones.</p>
         <div class="hero-actions">
-          <a href="#productos" class="btn btn-primary">Ver productos</a>
-          <a href="https://wa.me/573332380765?text=Hola%2C+quiero+saber+más+sobre+Toolkap" target="_blank" class="btn btn-ghost">Hablar con nosotros</a>
+          <a href="https://www.fincil.cloud" target="_blank" class="btn btn-primary">Probar Fincil Web gratis</a>
+          <a href="#productos" class="btn btn-ghost">Ver todos los productos</a>
         </div>
       </div>
 
@@ -86,21 +215,22 @@
 
       <div class="products-grid">
 
+        <!-- FINCIL EXCEL -->
         <article class="product-card available reveal">
           <div class="card-top">
             <span class="product-num">01</span>
             <span class="tag tag-available">Disponible ahora</span>
           </div>
           <div class="product-icon">📊</div>
-          <h3>Fincil</h3>
-          <p>Plantilla de Excel para controlar las finanzas de tu negocio. Registra ingresos, gastos, flujo de caja y punto de equilibrio — todo en un solo archivo.</p>
+          <h3>Fincil Excel</h3>
+          <p>Plantilla de Excel para controlar las finanzas de tu negocio. Registra ingresos, gastos, inventario, recetas y pedidos — todo en un solo archivo.</p>
           <ul class="features">
-            <li>Control de ingresos y gastos por categoría</li>
+            <li>11 hojas interconectadas</li>
+            <li>Control de ingresos, gastos y flujo de caja</li>
+            <li>Inventario y recetas con costo de producción</li>
+            <li>Gestión de pedidos con estados</li>
             <li>Dashboard con indicadores clave</li>
-            <li>Punto de equilibrio automático</li>
-            <li>Separación finanzas personales vs negocio</li>
-            <li>Proyección semanal de flujo de caja</li>
-            <li>Compatible con Excel 2016 en adelante</li>
+            <li>Compatible con Excel 2016, celular y web</li>
           </ul>
           <div class="product-price">
             <strong class="price-amount">$5.000</strong>
@@ -118,29 +248,43 @@
           </div>
         </article>
 
-        <article class="product-card soon reveal">
+        <!-- FINCIL WEB -->
+        <article class="product-card live reveal">
           <div class="card-top">
             <span class="product-num">02</span>
-            <span class="tag tag-soon">Próximamente</span>
+            <span class="tag tag-live">🟢 Disponible</span>
           </div>
-          <div class="product-icon muted-icon">🌐</div>
+          <div class="product-icon">🌐</div>
           <h3>Fincil Web</h3>
-          <p>La misma potencia de Fincil pero en tu navegador. Sin descargas, sin instalaciones. Accede desde cualquier dispositivo y mantén tus datos siempre actualizados.</p>
-          <ul class="features">
-            <li>Todo lo de Fincil Excel, en la nube</li>
-            <li>Acceso desde celular, tablet o PC</li>
-            <li>Datos siempre sincronizados</li>
-            <li>Reportes descargables en PDF</li>
-            <li>Sin necesidad de Excel instalado</li>
-            <li>Soporte incluido</li>
-          </ul>
+
+          <div class="trial-badge">
+            ✨ 3 días gratis · sin tarjeta de crédito
+          </div>
+
+          <p>La versión web completa de Fincil. Sin descargas, sin Excel. Accede desde cualquier dispositivo y gestiona todo tu negocio en tiempo real.</p>
+
+          <div class="modules-grid">
+            <span class="module-item">Pedidos y clientes</span>
+            <span class="module-item">Inventario</span>
+            <span class="module-item">Recetas y costos</span>
+            <span class="module-item">Ingresos y gastos</span>
+            <span class="module-item">Punto de equilibrio</span>
+            <span class="module-item">Finanzas personales</span>
+            <span class="module-item">Dashboard en tiempo real</span>
+            <span class="module-item">Acceso multi-dispositivo</span>
+          </div>
+
           <div class="product-price">
-            <strong class="price-amount muted">$10.000</strong>
+            <strong class="price-amount">$10.000</strong>
             <span class="price-detail">COP · por mes</span>
           </div>
-          <div class="product-actions">
-            <a href="https://wa.me/573332380765?text=Hola%2C+quiero+que+me+avisen+cuando+Fincil+Web+esté+disponible" target="_blank" class="btn-notify">
-              Avisarme cuando esté listo
+
+          <div class="product-actions" style="flex-direction: column; gap: 10px;">
+            <a href="https://www.fincil.cloud/registro" target="_blank" class="btn-demo">
+              🚀 Empezar gratis — 3 días de prueba
+            </a>
+            <a href="https://www.fincil.cloud" target="_blank" class="btn-demo btn-demo-ghost">
+              Ver demo de la app →
             </a>
           </div>
         </article>
@@ -158,22 +302,22 @@
         <div class="why-item reveal">
           <span class="why-num">01</span>
           <h4>Sin complicaciones</h4>
-          <p>No necesitas saber contabilidad. Si sabes sumar, puedes usar Fincil.</p>
+          <p>No necesitas saber contabilidad ni programación. Si tienes un negocio, Fincil es para ti.</p>
         </div>
         <div class="why-item reveal">
           <span class="why-num">02</span>
           <h4>Precio justo</h4>
-          <p>$5.000 COP una sola vez. Menos que un almuerzo, más que una app de $0.</p>
+          <p>$5.000 el Excel o $10.000/mes la app. Menos que un almuerzo, más que cualquier solución improvisada.</p>
         </div>
         <div class="why-item reveal">
           <span class="why-num">03</span>
           <h4>Listo en minutos</h4>
-          <p>Pagas, recibes el archivo y empiezas a usarlo el mismo día.</p>
+          <p>Crea tu cuenta, entra al dashboard y empieza a registrar tu negocio el mismo día.</p>
         </div>
         <div class="why-item reveal">
           <span class="why-num">04</span>
           <h4>Soporte directo</h4>
-          <p>¿Tienes dudas? Nos escribes al WhatsApp y te respondemos.</p>
+          <p>¿Tienes dudas? Nos escribes al WhatsApp y te respondemos. Sin bots, sin esperas.</p>
         </div>
       </div>
     </section>
@@ -182,17 +326,18 @@
     <section class="cta" id="contacto">
       <div class="cta-inner reveal">
         <h2>¿Listo para tener<br/>claridad en tus finanzas?</h2>
-        <p>Empieza hoy con Fincil. $5.000 COP y te lo enviamos al instante.</p>
+        <p>Empieza gratis hoy. 3 días de prueba sin tarjeta de crédito.</p>
         <div class="cta-actions">
-          <a href="https://wa.me/573332380765?text=Hola%2C+quiero+comprar+Fincil+%F0%9F%93%8A" target="_blank" class="btn-wa">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Comprar por WhatsApp
-          </a>
-          <a href="https://m.me/toolkap" target="_blank" class="btn-fb">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.149 0 11.504c0 3.639 1.799 6.876 4.607 8.993V24l4.208-2.303c1.126.31 2.319.479 3.553.479 6.627 0 12-5.149 12-11.504C24 5.149 18.627 0 12 0zm1.191 15.494l-3.054-3.235-5.963 3.235 6.559-6.966 3.129 3.235 5.887-3.235-6.558 6.966z"/></svg>
-            Comprar por Messenger
+          <a href="https://www.fincil.cloud/registro" target="_blank" class="btn-demo" style="max-width:320px; margin: 0 auto;">
+            🚀 Crear cuenta gratis en Fincil Web
           </a>
         </div>
+        <p style="margin-top: 20px; font-size: 0.85rem; opacity: 0.7;">
+          ¿Prefieres el Excel? 
+          <a href="https://wa.me/573332380765?text=Hola%2C+quiero+comprar+Fincil+%F0%9F%93%8A" target="_blank" style="color: #00c9a7; font-weight: 600; text-decoration: none;">
+            Cómpralo por WhatsApp — $5.000 COP
+          </a>
+        </p>
       </div>
     </section>
 
@@ -211,6 +356,7 @@
       <p>© 2026 Toolkap</p>
     </div>
     <div class="footer-right">
+      <a href="https://www.fincil.cloud" target="_blank">Fincil Web</a>
       <a href="https://wa.me/573332380765" target="_blank">WhatsApp</a>
       <a href="mailto:toolkapcorp@gmail.com">toolkapcorp@gmail.com</a>
     </div>

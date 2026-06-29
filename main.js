@@ -31,6 +31,7 @@ navLinks.querySelectorAll('a').forEach((link) => {
   });
 });
 
+
 // Close nav on outside click
 document.addEventListener('click', (e) => {
   if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
@@ -39,3 +40,38 @@ document.addEventListener('click', (e) => {
     navToggle.setAttribute('aria-expanded', 'false');
   }
 });
+
+// ── WHATSAPP WIDGET ──
+const waFab     = document.getElementById('wa-fab');
+const waPopup   = document.getElementById('wa-popup');
+const waClose   = document.getElementById('wa-popup-close');
+
+function openWaPopup() {
+  waPopup.classList.add('visible');
+  waFab.classList.add('open');
+  waFab.setAttribute('aria-expanded', 'true');
+}
+
+function closeWaPopup() {
+  waPopup.classList.remove('visible');
+  waFab.classList.remove('open');
+  waFab.setAttribute('aria-expanded', 'false');
+}
+
+waFab.addEventListener('click', (e) => {
+  e.stopPropagation();
+  waPopup.classList.contains('visible') ? closeWaPopup() : openWaPopup();
+});
+
+waClose.addEventListener('click', closeWaPopup);
+
+// Close on outside click
+document.addEventListener('click', (e) => {
+  const widget = document.getElementById('wa-widget');
+  if (!widget.contains(e.target)) closeWaPopup();
+});
+
+// Auto-open popup after 8 seconds if user hasn't interacted
+setTimeout(() => {
+  if (!waPopup.classList.contains('visible')) openWaPopup();
+}, 8000);

@@ -1,7 +1,7 @@
 "use client";
 // components/Header.tsx
 import Image from "next/image";
-import Link from "next/link";
+import { SmartLink } from "./ui";
 import { useState } from "react";
 
 const links = [
@@ -15,19 +15,19 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-linea bg-white/95 backdrop-blur">
       <nav aria-label="Principal" className="mx-auto flex max-w-[1240px] items-center justify-between gap-4 px-6 py-3.5">
-        <Link href="#inicio" aria-label="Toolkap, inicio">
+        <SmartLink href="#inicio" aria-label="Toolkap, inicio">
           <Image src="/brand/toolkap-logo-horizontal.svg" alt="Toolkap" width={182} height={38} priority className="h-[38px] w-auto" />
-        </Link>
+        </SmartLink>
 
         <div className="hidden items-center gap-7 text-[15px] font-medium md:flex">
           {links.map((l) => (
-            <Link key={l.href} href={l.href} className="text-tinta hover:text-marino">
+            <SmartLink key={l.href} href={l.href} className="text-tinta hover:text-marino">
               {l.label}
-            </Link>
+            </SmartLink>
           ))}
-          <Link href="#cotiza" className="faceta-boton bg-marino py-3 pl-5 pr-7 font-semibold text-white hover:bg-teal-profundo">
+          <SmartLink href="#cotiza" className="faceta-boton bg-marino py-3 pl-5 pr-7 font-semibold text-white hover:bg-teal-profundo">
             Cotiza tu proyecto →
-          </Link>
+          </SmartLink>
         </div>
 
         <button
@@ -48,13 +48,13 @@ export default function Header() {
         <div id="menu-movil" className="border-t border-linea bg-white px-6 py-4 md:hidden">
           <div className="flex flex-col gap-1">
             {links.map((l) => (
-              <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className="py-3 font-medium text-tinta">
+              <SmartLink key={l.href} href={l.href} onClick={() => setOpen(false)} className="py-3 font-medium text-tinta">
                 {l.label}
-              </Link>
+              </SmartLink>
             ))}
-            <Link href="#cotiza" onClick={() => setOpen(false)} className="faceta-boton mt-2 bg-marino py-3.5 pl-5 pr-7 font-semibold text-white">
+            <SmartLink href="#cotiza" onClick={() => setOpen(false)} className="faceta-boton mt-2 bg-marino py-3.5 pl-5 pr-7 font-semibold text-white">
               Cotiza tu proyecto →
-            </Link>
+            </SmartLink>
           </div>
         </div>
       )}

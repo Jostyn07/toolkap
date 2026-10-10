@@ -1,7 +1,7 @@
 "use client";
 // components/Services.tsx — selector de servicios
 import { useState } from "react";
-import Link from "next/link";
+import { SmartLink } from "./ui";
 import { services } from "@/lib/content";
 import { Eyebrow } from "./ui";
 import { useQuote } from "./QuoteContext";
@@ -65,7 +65,7 @@ export default function Services() {
           </div>
           <div className="mt-auto flex flex-wrap items-center justify-between gap-4 border-t border-linea pt-5">
             <p className="font-display text-[22px] font-bold">{s.price ? `Desde ${s.price}` : "Precio según alcance"}</p>
-            <Link
+            <SmartLink
               href="#cotiza"
               onClick={() => {
                 setNeed(sel);
@@ -74,7 +74,7 @@ export default function Services() {
               className="faceta-boton bg-marino py-3.5 pl-5 pr-8 font-semibold text-white hover:bg-teal-profundo"
             >
               Cotizar este servicio
-            </Link>
+            </SmartLink>
           </div>
         </div>
       </div>

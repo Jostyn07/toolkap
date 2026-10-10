@@ -6,6 +6,11 @@ export const site = {
   // Número en formato internacional sin "+" ni espacios, ej. "573001234567". Vacío = se oculta el botón de WhatsApp.
   whatsapp: "",
   facebook: "", // URL de la página de Facebook
+  social: [
+    { name: "Instagram", href: "https://www.instagram.com/toolkap/" },
+    { name: "TikTok", href: "https://www.tiktok.com/@toolkapcorp" },
+    { name: "YouTube", href: "https://www.youtube.com/@Toolkap" },
+  ],
   city: "Barranquilla, Colombia",
 };
 

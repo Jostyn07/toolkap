@@ -1,0 +1,61 @@
+/* app/globals.css — Toolkap · marca Origami (Tailwind CSS v4) */
+@import "tailwindcss";
+@source inline("border-xiris border-credipro border-fincil");
+
+@theme {
+  /* Colores (tomados del logo) */
+  --color-marino: #0f3046;
+  --color-marino-2: #163d58; /* superficie sobre marino */
+  --color-teal: #0a8995; /* facetas y texto >= 24px */
+  --color-teal-profundo: #185466; /* texto pequeño de acento */
+  --color-teal-claro: #6fd0d8; /* etiquetas sobre marino */
+  --color-azul: #2266b2;
+  --color-papel: #f6f6f6;
+  --color-tinta: #33475b;
+  --color-tinta-suave: #4a5d70;
+  --color-niebla: #c5d2dc; /* texto sobre marino */
+  --color-linea: #dde2e6;
+  --color-linea-oscura: #3d5875;
+  --color-reticula: #727d83;
+
+  /* Color por producto */
+  --color-xiris: #185466;
+  --color-credipro: #2266b2;
+  --color-fincil: #0a8995;
+
+  --font-display: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+}
+
+@layer base {
+  html { background: var(--color-papel); color: var(--color-marino); scroll-behavior: smooth; }
+  body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; }
+  :focus-visible { outline: 2px solid var(--color-azul); outline-offset: 3px; }
+  [id] { scroll-margin-top: 80px; }
+}
+
+/* ---------- Sistema de facetas (máximo dos visibles por pantalla) ---------- */
+@utility faceta-boton { clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%); }
+@utility faceta-tarjeta { clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%); }
+@utility faceta-marca { clip-path: polygon(0 0, 100% 0, 100% 100%); }
+@utility faceta-esquina { clip-path: polygon(0 0, 100% 100%, 100% 45%, 55% 0); }
+@utility faceta-destello-1 { clip-path: polygon(100% 0, 100% 100%, 20% 0); }
+@utility faceta-destello-2 { clip-path: polygon(100% 0, 55% 55%, 20% 0); }
+@utility faceta-destello-3 { clip-path: polygon(100% 0, 100% 40%, 75% 25%); }
+@utility faceta-corte-superior { clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 100%); }
+
+@utility reticula {
+  background-image:
+    linear-gradient(var(--color-reticula) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-reticula) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

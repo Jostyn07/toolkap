@@ -4,7 +4,7 @@ export const site = {
   url: "https://toolkap.cloud", // [CONFIRMAR] dominio final
   email: "toolkapcorp@gmail.com",
   // Número en formato internacional sin "+" ni espacios, ej. "573001234567". Vacío = se oculta el botón de WhatsApp.
-  whatsapp: "",
+  whatsapp: "573332380765",
   facebook: "", // URL de la página de Facebook
   social: [
     { name: "Instagram", href: "https://www.instagram.com/toolkap/" },

@@ -7,6 +7,7 @@ import Quoter from "@/components/Quoter";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
 import { QuoteProvider } from "@/components/QuoteContext";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <FinalCta />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </QuoteProvider>
   );
 }

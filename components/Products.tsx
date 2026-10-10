@@ -9,7 +9,7 @@ import { Eyebrow } from "./ui";
 export default function Products() {
   const [sel, setSel] = useState(0);
   const p = products[sel];
-  const external = p.href.startsWith("http");
+  const external = p.href?.startsWith("http");
 
   return (
     <section id="productos" className="faceta-corte-superior bg-marino text-papel">
@@ -60,13 +60,15 @@ export default function Products() {
                 <li key={f}>{f}</li>
               ))}
             </ul>
-            <Link
-              href={p.href}
-              {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              className={`faceta-boton mt-2 self-start py-3.5 pl-6 pr-8 font-semibold text-white ${p.color}`}
-            >
-              {p.cta} →
-            </Link>
+            {p.href && p.cta && (
+              <Link
+                href={p.href}
+                {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                className={`faceta-boton mt-2 self-start py-3.5 pl-6 pr-8 font-semibold text-white ${p.color}`}
+              >
+                {p.cta} →
+              </Link>
+            )}
           </div>
         </div>
       </div>

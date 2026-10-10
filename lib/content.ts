@@ -55,38 +55,12 @@ export type Product = {
   headline: string;
   desc: string;
   features: string[];
-  cta: string;
-  href: string;
+  cta?: string;
+  href?: string; // sin enlace = no se muestra el botón
   image: { src: string; alt: string; width: number; height: number };
 };
 
 export const products: Product[] = [
-  {
-    id: "xiris",
-    name: "Xiris",
-    tag: "CRM y comunicación",
-    color: "bg-xiris",
-    kicker: "XIRIS · CRM",
-    headline: "CRM y comunicación en un solo lugar",
-    desc: "Leads, WhatsApp, llamadas y tareas de todo tu equipo en un panel, con varias sucursales y reportes en tiempo real.",
-    features: ["WhatsApp y llamadas integrados", "Comunicación interna y tickets", "Embudos y conversión por etapa", "Sucursales, equipos y reportes"],
-    cta: "Explorar Xiris",
-    href: "#", // [CONFIRMAR] URL de Xiris
-    image: { src: "/products/xiris.png", alt: "Panel de Xiris con leads, llamadas, WhatsApp y conversión por etapa", width: 1359, height: 594 },
-  },
-  {
-    id: "credipro",
-    name: "CrediPro",
-    tag: "Crédito y clientes",
-    color: "bg-credipro",
-    kicker: "CREDIPRO · PRÉSTAMOS",
-    headline: "Una visión clara de tu cartera",
-    desc: "Clientes, préstamos, pagos y cobranza en un panel, con el capital pendiente, la mora y los próximos pagos siempre a la vista.",
-    features: ["Clientes, préstamos y pagos", "Calendario y cobranza", "Caja y documentos", "Reportes y score con IA"],
-    cta: "Conocer CrediPro",
-    href: "#", // [CONFIRMAR] URL de CrediPro
-    image: { src: "/products/credipro.png", alt: "Panel de CrediPro con clientes, préstamos, capital pendiente y estado de la cartera", width: 1589, height: 732 },
-  },
   {
     id: "fincil",
     name: "Fincil.cloud",
@@ -99,6 +73,30 @@ export const products: Product[] = [
     cta: "Probar Fincil gratis",
     href: "https://fincil.cloud", // [CONFIRMAR]
     image: { src: "/products/fincil.png", alt: "Panel de Fincil con ventas, inventario y productos más vendidos", width: 465, height: 400 },
+  },
+  {
+    id: "credipro",
+    name: "CrediPro",
+    tag: "Crédito y clientes",
+    color: "bg-credipro",
+    kicker: "CREDIPRO · PRÉSTAMOS",
+    headline: "Una visión clara de tu cartera",
+    desc: "Clientes, préstamos, pagos y cobranza en un panel, con el capital pendiente, la mora y los próximos pagos siempre a la vista.",
+    features: ["Clientes, préstamos y pagos", "Calendario y cobranza", "Caja y documentos", "Reportes y score con IA"],
+    cta: "Conocer CrediPro",
+    href: "https://credipro.cloud",
+    image: { src: "/products/credipro.png", alt: "Panel de CrediPro con clientes, préstamos, capital pendiente y estado de la cartera", width: 1589, height: 732 },
+  },
+  {
+    id: "xiris",
+    name: "Xiris",
+    tag: "CRM y comunicación",
+    color: "bg-xiris",
+    kicker: "XIRIS · CRM",
+    headline: "CRM y comunicación en un solo lugar",
+    desc: "Leads, WhatsApp, llamadas y tareas de todo tu equipo en un panel, con varias sucursales y reportes en tiempo real.",
+    features: ["WhatsApp y llamadas integrados", "Comunicación interna y tickets", "Embudos y conversión por etapa", "Sucursales, equipos y reportes"],
+    image: { src: "/products/xiris.png", alt: "Panel de Xiris con leads, llamadas, WhatsApp y conversión por etapa", width: 1359, height: 594 },
   },
 ];
 

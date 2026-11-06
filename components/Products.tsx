@@ -41,6 +41,7 @@ export default function Products() {
 
         <div role="tabpanel" id="panel-producto" aria-labelledby={`tab-${p.id}`} className="flex flex-wrap items-stretch gap-8">
           <div className={`flex min-w-0 flex-[3_1_560px] items-center justify-center border-t-4 bg-papel ${p.color.replace("bg-", "border-")}`}>
+            {p.image.src ? (
             <Image
               key={p.id}
               src={p.image.src}
@@ -50,6 +51,11 @@ export default function Products() {
               sizes="(min-width: 1240px) 720px, 100vw"
               className="h-auto max-h-[520px] w-full object-contain"
             />
+            ) : (
+              <div role="img" aria-label={p.image.alt} className="flex aspect-[16/10] w-full items-center justify-center border-2 border-dashed border-teal p-4 text-center font-mono text-xs font-semibold text-teal-profundo">
+                [CAPTURA PENDIENTE: {p.image.nombre}]
+              </div>
+            )}
           </div>
           <div className="flex flex-[2_1_340px] flex-col gap-4">
             <Eyebrow dark>{p.kicker}</Eyebrow>

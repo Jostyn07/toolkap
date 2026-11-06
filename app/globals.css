@@ -1,6 +1,6 @@
 /* app/globals.css — Toolkap · marca Origami (Tailwind CSS v4) */
 @import "tailwindcss";
-@source inline("border-xiris border-credipro border-fincil");
+@source inline("border-xiris border-credipro border-fincil border-inventario");
 
 @theme {
   /* Colores (tomados del logo) */
@@ -22,6 +22,7 @@
   --color-xiris: #185466;
   --color-credipro: #2266b2;
   --color-fincil: #0a8995;
+  --color-inventario: #0f3046;
 
   --font-display: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;

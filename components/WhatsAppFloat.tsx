@@ -4,8 +4,8 @@
 import { useEffect, useRef, useState } from "react";
 import { whatsappLink } from "@/lib/site";
 
-export default function WhatsAppFloat() {
-  const href = whatsappLink("Hola Toolkap, quiero información sobre un proyecto.");
+export default function WhatsAppFloat({ message = "Hola Toolkap, quiero información sobre un proyecto." }: { message?: string }) {
+  const href = whatsappLink(message);
   const [lift, setLift] = useState(0);
   const [atBottom, setAtBottom] = useState(false);
   const raf = useRef<number | null>(null);

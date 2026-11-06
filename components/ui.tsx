@@ -15,8 +15,12 @@ export function SmartLink({ href, children, className = "", onClick, external, "
         onClick={(e) => {
           onClick?.();
           const el = document.getElementById(href.slice(1));
-          if (!el) return;
           e.preventDefault();
+          if (!el) {
+            // La sección no está en esta página: ir al home.
+            window.location.assign("/" + href);
+            return;
+          }
           el.scrollIntoView({ behavior: "smooth", block: "start" });
           history.replaceState(null, "", href);
         }}

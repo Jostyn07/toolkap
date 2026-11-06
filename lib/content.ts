@@ -57,10 +57,23 @@ export type Product = {
   features: string[];
   cta?: string;
   href?: string; // sin enlace = no se muestra el botón
-  image: { src: string; alt: string; width: number; height: number };
+  image: { src: string | null; nombre?: string; alt: string; width: number; height: number }; // src null = captura pendiente
 };
 
 export const products: Product[] = [
+  {
+    id: "inventario",
+    name: "Toolkap Inventario",
+    tag: "Inventario y ventas",
+    color: "bg-inventario",
+    kicker: "TOOLKAP INVENTARIO · ESCRITORIO",
+    headline: "Se fue el internet. No tu negocio.",
+    desc: "Inventario, ventas y caja en tu computador, sin depender del internet. Licencia de $50.000, pago único.",
+    features: ["Inventario y stock", "Ventas y caja", "Clientes y cartera", "Escáner con el celular"],
+    cta: "Conocer Toolkap Inventario",
+    href: "/inventario",
+    image: { src: "/products/inventario/hero-productos.png", alt: "Lista de productos de Toolkap Inventario con costo, precio y existencias", width: 1581, height: 850 },
+  },
   {
     id: "fincil",
     name: "Fincil.cloud",

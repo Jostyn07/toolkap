@@ -8,6 +8,7 @@ const links = [
   { href: "#servicios", label: "Servicios" },
   { href: "#productos", label: "Productos" },
   { href: "#proceso", label: "Proceso" },
+  { href: "/inventario", label: "Inventario" },
 ];
 
 export default function Header() {

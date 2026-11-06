@@ -12,7 +12,7 @@ export const capturas = {
   ventas: { src: "/products/inventario/ventas-carrito.png", nombre: "ventas-carrito", alt: "Pantalla de nueva venta con el carrito, el descuento y los medios de pago", width: 1596, height: 847 },
   caja: { src: "/products/inventario/inicio-panel.png", nombre: "inicio-panel", alt: "Panel de inicio con la caja abierta, el efectivo esperado, las ventas de hoy y las alertas de stock", width: 1595, height: 848 },
   clientes: { src: "/products/inventario/clientes-cartera.png", nombre: "clientes-cartera", alt: "Venta por cobrar con el cliente, su saldo, el abono inicial y la fecha de vencimiento", width: 1599, height: 851 },
-  reportes: captura("reportes", "Reporte de ventas por período y por método de pago"),
+  reportes: { src: "/products/inventario/reportes.png", nombre: "reportes", alt: "Reporte del mes con ventas del período, valor del inventario, dinero por medio de pago y ventas por producto", width: 1593, height: 826 },
   copias: { src: "/products/inventario/copias-seguridad.png", nombre: "copias-seguridad", alt: "Copias de seguridad guardadas, automáticas y manuales, con la opción de restaurar", width: 876, height: 615 },
   celular: { src: "/products/inventario/celular-escaner.png", nombre: "celular-escaner", alt: "App Toolkap Escáner con los botones Escanear un código, Escaneo continuo y Foto del producto", width: 576, height: 1280 },
   productos: { src: "/products/inventario/inventario-entradas.png", nombre: "inventario-entradas", alt: "Registro de entradas de inventario con lector USB o celular", width: 1591, height: 848 },

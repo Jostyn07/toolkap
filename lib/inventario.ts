@@ -14,7 +14,7 @@ export const capturas = {
   clientes: { src: "/products/inventario/clientes-cartera.png", nombre: "clientes-cartera", alt: "Venta por cobrar con el cliente, su saldo, el abono inicial y la fecha de vencimiento", width: 1599, height: 851 },
   reportes: captura("reportes", "Reporte de ventas por período y por método de pago"),
   copias: { src: "/products/inventario/copias-seguridad.png", nombre: "copias-seguridad", alt: "Copias de seguridad guardadas, automáticas y manuales, con la opción de restaurar", width: 876, height: 615 },
-  celular: { ...captura("celular-escaner", "App Toolkap Escáner leyendo un código de barras"), width: 900, height: 1600 },
+  celular: { src: "/products/inventario/celular-escaner.png", nombre: "celular-escaner", alt: "App Toolkap Escáner con los botones Escanear un código, Escaneo continuo y Foto del producto", width: 576, height: 1280 },
   productos: { src: "/products/inventario/inventario-entradas.png", nombre: "inventario-entradas", alt: "Registro de entradas de inventario con lector USB o celular", width: 1591, height: 848 },
 };
 

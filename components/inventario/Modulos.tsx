@@ -14,7 +14,9 @@ export default function Modulos() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {modulos.items.map((m) => (
             <article key={m.titulo} className="flex flex-col border border-linea bg-white">
-              <CapturaImg c={m.captura} sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 100vw" />
+              <div className="aspect-[16/10] overflow-hidden border-b border-linea">
+                <CapturaImg c={m.captura} sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 100vw" className="!h-full object-cover object-left-top" />
+              </div>
               <div className="flex flex-col gap-3 p-6">
                 <h3 className="text-xl text-marino">{m.titulo}</h3>
                 <ul className="flex flex-col gap-1.5 text-[15px] text-tinta">

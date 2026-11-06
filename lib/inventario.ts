@@ -10,10 +10,10 @@ const captura = (nombre: string, alt: string): Captura => ({ src: null, nombre, 
 export const capturas = {
   hero: { src: "/products/inventario/hero-productos.png", nombre: "hero-productos", alt: "Lista de productos de Toolkap Inventario con costo, precio y existencias, en modo local", width: 1581, height: 850 },
   ventas: { src: "/products/inventario/ventas-carrito.png", nombre: "ventas-carrito", alt: "Pantalla de nueva venta con el carrito, el descuento y los medios de pago", width: 1596, height: 847 },
-  caja: captura("caja-cierre", "Cierre de caja con el efectivo esperado y la diferencia"),
+  caja: { src: "/products/inventario/inicio-panel.png", nombre: "inicio-panel", alt: "Panel de inicio con la caja abierta, el efectivo esperado, las ventas de hoy y las alertas de stock", width: 1595, height: 848 },
   clientes: { src: "/products/inventario/clientes-cartera.png", nombre: "clientes-cartera", alt: "Venta por cobrar con el cliente, su saldo, el abono inicial y la fecha de vencimiento", width: 1599, height: 851 },
   reportes: captura("reportes", "Reporte de ventas por período y por método de pago"),
-  copias: captura("copias-seguridad", "Configuración de copias de seguridad con el estado Protegido"),
+  copias: { src: "/products/inventario/copias-seguridad.png", nombre: "copias-seguridad", alt: "Copias de seguridad guardadas, automáticas y manuales, con la opción de restaurar", width: 876, height: 615 },
   celular: { ...captura("celular-escaner", "App Toolkap Escáner leyendo un código de barras"), width: 900, height: 1600 },
   productos: { src: "/products/inventario/inventario-entradas.png", nombre: "inventario-entradas", alt: "Registro de entradas de inventario con lector USB o celular", width: 1591, height: 848 },
 };
